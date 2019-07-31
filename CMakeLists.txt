@@ -72,7 +72,7 @@ endif(BUILD_DVision)
 
 
 if(BUILD_DUtilsCV OR BUILD_DVision)
-  find_package(OpenCV REQUIRED)
+  find_package(OpenCV 3.3.1 REQUIRED)
 endif(BUILD_DUtilsCV OR BUILD_DVision)
 
 set(LIB_SHARED "SHARED")
@@ -99,5 +99,5 @@ if(BUILD_DVision)
 endif()
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/DLibConfig.cmake"
   DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME})
-install(FILES "${PROJECT_BINARY_DIR}/DLibConfig.cmake" 
+install(FILES "${PROJECT_BINARY_DIR}/DLibConfig.cmake"
   DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/DLib/)
